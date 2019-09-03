@@ -1,5 +1,5 @@
 # ModuleAsset
-### 1. kakaologin module
+### 1. kakao oauth module
 kakao developers official document link : https://developers.kakao.com/docs/android/user-management
 tistory : https://onepinetwopine.tistory.com/370
 
@@ -14,7 +14,7 @@ tistory : https://onepinetwopine.tistory.com/370
 07. drawing graph library
 08. fragment
 09. mySQL
-10. google auth
+10. google oauth
 11. navigation drawer 
 12. mvc
 13. mvp
