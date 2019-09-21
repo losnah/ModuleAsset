@@ -3,6 +3,7 @@ package com.onsemiro.hanpinetree.widgetlistviewmodule;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
@@ -63,17 +64,18 @@ public class MyRemoteViewsFactory implements RemoteViewsService.RemoteViewsFacto
     // 항목 선택 이벤트 발생 시 인텐트에 담겨야 할 항목 데이터를 추가해주어야 하는 함수
     @Override
     public RemoteViews getViewAt(int position) {
-        RemoteViews row = new RemoteViews(context.getPackageName(), R.layout.item_collection);
-        row.setTextViewText(R.id.text1, arrayList.get(position).content);
+        RemoteViews listviewWidget = new RemoteViews(context.getPackageName(), R.layout.item_collection);
+        listviewWidget.setTextViewText(R.id.text1, arrayList.get(position).content);
 
         // 항목 선택 이벤트 발생 시 인텐트에 담겨야 할 항목 데이터를 추가해주는 코드
         Intent dataIntent = new Intent();
         dataIntent.putExtra("item_id", arrayList.get(position)._id);
         dataIntent.putExtra("item_data", arrayList.get(position).content);
-        row.setOnClickFillInIntent(R.id.text1, dataIntent);
+        listviewWidget.setOnClickFillInIntent(R.id.text1, dataIntent);
         //setOnClickFillInIntent 브로드캐스트 리시버에서 항목 선택 이벤트가 발생할 때 실행을 의뢰한 인텐트에 각 항목의 데이터를 추가해주는 함수
         //브로드캐스트 리시버의 인텐트와 Extra 데이터가 담긴 인텐트를 함치는 역할을 한다.
-        return null;
+
+        return listviewWidget;
     }
 
     //로딩 뷰를 표현하기 위해 호출, 없으면 null
