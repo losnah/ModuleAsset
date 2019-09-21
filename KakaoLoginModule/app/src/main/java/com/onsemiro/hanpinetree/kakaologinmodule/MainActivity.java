@@ -53,6 +53,10 @@ public class MainActivity extends Activity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setKakaoOauth();
+    }
+
+    public void setKakaoOauth(){
 
         callback = new SessionCallback();
         Session.getCurrentSession().addCallback(callback);
