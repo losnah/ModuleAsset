@@ -20,8 +20,6 @@ public class WidgetListview extends AppWidgetProvider {
      */
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
-
-//        여기부분 다 사용할 일 없어져서 주석처리함!
         CharSequence widgetText = context.getString(R.string.appwidget_text);
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_listview);
@@ -53,12 +51,6 @@ public class WidgetListview extends AppWidgetProvider {
         super.onUpdate(context, appWidgetManager, appWidgetIds);
     }
 
-//    @Override
-//    public void onReceive(Context context, Intent intent) {
-//        super.onReceive(context, intent);
-//            AppWidgetManager appWidgetManager=AppWidgetManager.getInstance(context);
-//            int appWidgetIds[]=appWidgetManager.getAppWidgetIds(new ComponentName(context, WidgetListview.class));
-//            appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.list);
-//    }
+
 }
 
