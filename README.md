@@ -14,6 +14,15 @@
 ### 4. proguard 
 - tistory : https://onepinetwopine.tistory.com/381
 
+### 5. listviewWidget
+- tistory : https://onepinetwopine.tistory.com/402
+
+### 6. timeWidget
+30분 이내의 업데이트 주기를 가진 위젯 설정하기(-> 새로고침 기능)
+시간 및 날짜 값 반영하여 이벤트 발생시키기
+클릭 이벤트 리스너 만들기
+서버에서 데이터 받아오기 
+
 
 
 ### Coming soon
